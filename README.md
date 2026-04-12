@@ -25,17 +25,12 @@ Với mục tiêu phát triển theo định hướng **Analytics Engineering**,
 
 ## 🏗️ Cấu trúc Dự án (Project Architecture)
 
-Dự án được chia thành 3 phân hệ phân tích độc lập nhưng bổ trợ cho nhau để tạo thành một bức tranh chiến lược toàn cảnh:
+Dự án được chia thành 1 phần tiền xử lý và 2 phân hệ phân tích độc lập nhưng bổ trợ cho nhau để tạo thành một bức tranh chiến lược toàn cảnh:
 
 ### Phần 1: Dự báo Lưu lượng & Phân tích Tính mùa vụ (Time-Series Forecasting) 📈
 * **Thuật toán:** Hồi quy Tuyến tính Đa biến (Multiple Linear Regression).
 * **Mô tả:** Phân rã dữ liệu chuỗi thời gian thành hai yếu tố: Xu hướng vĩ mô (Trend) và Tính chu kỳ mùa vụ (Seasonality).
 * **Business Value:** Giúp Ban quản lý sân bay dự báo chính xác các tháng đỉnh điểm để tối ưu hóa nguồn nhân lực (An ninh, Check-in), đồng thời chọn đúng các tháng "đáy" mùa vụ để lên lịch bảo trì hạ tầng nhằm giảm thiểu rủi ro gián đoạn chuyến bay. Các hãng hàng không sử dụng dữ liệu này để định giá vé tự động (Dynamic Pricing) và điều phối phi đội.
-
-### Phần 2: Định vị Thị trường Địa lý (Market Segmentation) 🌍
-* **Thuật toán:** Phân cụm K-Means (K-Means Clustering).
-* **Mô tả:** Phân nhóm các khu vực địa lý toàn cầu (Châu Á, Châu Âu, Nội địa Mỹ...) dựa trên quy mô hành khách, số lượng đối thủ cạnh tranh và tỷ lệ thâm nhập của vé giá rẻ.
-* **Business Value:** Chuyển đổi góc nhìn chiến lược từ vi mô sang vĩ mô. Giúp các nhà hoạch định đường bay nhận diện các "Đại dương đỏ" cạnh tranh khốc liệt bằng giá (như Nội địa Mỹ) và các thị trường "Bò sữa" mang lại siêu lợi nhuận (như Châu Á, Châu Âu) để định hướng thu hút đầu tư hạ tầng và dịch vụ bán lẻ phù hợp.
 
 ### Phần 3: Khám phá Liên minh Hàng không (Network Discovery) 🕸️
 * **Thuật toán:** Khai phá Luật kết hợp (FP-Growth / Association Rules).
